@@ -1,0 +1,13 @@
+{% extends 'neuralnetwork/base.html' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-6">
+            <img class="img-responsive img-fluid" src="{{ object.image.url }}" alt="">
+        </div>
+        <div class="col-md-6">
+            <div> Height : {{ object.image.height }} </div>
+            <div> Width : {{ object.image.width }} </div>
+        </div>
+    </div>
+{% endblock %}

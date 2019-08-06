@@ -1,0 +1,19 @@
+{% extends 'neuralnetwork/base.html' %}
+{% load fontawesome %}
+{% load bootstrap4 %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery=1 %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-5"></div>
+        <div class="col-md-2 text-center">
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% bootstrap_form form %}
+                {% bootstrap_button '上傳' button_type='submit' button_class="btn-info" %}
+            </form>
+        </div>
+        <div class="col-md-5"></div>
+    </div>
+{% endblock %}

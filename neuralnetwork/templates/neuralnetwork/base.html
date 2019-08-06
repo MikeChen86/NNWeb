@@ -1,0 +1,29 @@
+{% load bootstrap4 %}
+{% load fontawesome %}
+{% bootstrap_css %}
+{% bootstrap_javascript jquery='full' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>NNWeb</title>
+    <style>
+        body {
+            font-family: 'Consolas', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+        }
+    </style>
+</head>
+<body>
+{% fontawesome_stylesheet %}
+{% block navbar %}
+    {% include "neuralnetwork/navbar.html" %}
+{% endblock %}
+<div class="content">
+    {% bootstrap_messages %}
+    {% block content %}
+    {% endblock %}
+</div>
+</body>
+</html>
